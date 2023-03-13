@@ -1,0 +1,143 @@
+.nav-item {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  
+    text-align: center;
+  
+    color: #2e266f;
+  }
+  
+  .nav-item:hover {
+    text-decoration: underline;
+  }
+  
+  div {
+    font-family: "Poppins";
+  }
+  
+  .h-1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+  }
+  
+  .h-2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+  }
+  
+  .h-2:hover {
+    text-shadow: 4px 3px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .date {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 62px;
+  }
+  
+  .img {
+    width: 64px;
+  }
+  
+  .change-profile {
+    text-decoration: none;
+    color: #2e266f;
+  
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+  }
+  
+  .form-label {
+    font-weight: 900;
+  }
+  
+  .form-control {
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 20px 20px;
+  }
+  
+  .form-control:focus {
+    background: #ffffff;
+    border: 1px solid #efc81a;
+    box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.11);
+    border-radius: 6px;
+    padding: 20px 20px;
+  }
+  
+  .header {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 42px;
+    line-height: 62px;
+  
+    color: #b6b6b6;
+  
+    text-decoration: none;
+  }
+  
+  .header:hover {
+    color: #3f3a3a;
+  }
+  
+  .header:active {
+    color: #3f3a3a;
+  }
+  
+  #border {
+    border-bottom: 20px solid;
+    color: #efc81a;
+    margin: -34px 20px 20px -15px;
+  }
+  
+  #footer {
+    background-color: #efc81a;
+    min-width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .footer-h1 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80px;
+    color: #2e266f;
+    margin-top: 131px;
+  }
+  
+  .footer-h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    padding-top: 36px;
+  }
+  
+  .footer-h3 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #707070;
+  }
+  
