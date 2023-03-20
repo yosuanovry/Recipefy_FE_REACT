@@ -2,11 +2,12 @@ import {React, useState, useEffect} from 'react'
 import NavbarProfile from '../../Component/navbar-menu/indexNavbar'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 import Footer from '../../Component/footer/indexFooter'
+import { useDispatch } from 'react-redux'
+import { editMenu } from '../../Storages/Actions/userMenu'
 
-let token = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3YmQzZDc1LWFlZGEtNDAyMS1hMWU3LTgzMjQ2M2MxNzA3ZSIsImVtYWlsIjoieW9zdWF0ZXN0QHlvcy5zZyIsImZ1bGxuYW1lIjoieW9zdWEiLCJwaG90byI6bnVsbCwidmVyaWYiOjEsIm90cCI6IjQzNjkxOSIsImNyZWF0ZWRfYXQiOiIyMDIzLTAyLTI2VDA2OjQ1OjIyLjA0NFoiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzg1MTk1NzcsImV4cCI6MTY3OTgzMzU3N30.0gxVaDdsb_NkJxCbMPMHyJdp_mXEgJ3Okkv4RtbZBV0"
 
-let url = `${process.env.REACT_APP_SECRET_KEY}/recipes`
 
 export default function UpdateRecipe() {
   const {id} = useParams()
@@ -16,8 +17,11 @@ export default function UpdateRecipe() {
   })
   const [photo,setPhoto] = useState()
   const [alert,setAlert] = useState(false)
-
   const [data,setData] = useState()
+  const [currentPhoto, setCurrentPhoto] = useState(null);
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
 
 useEffect(() => {
   getData();
@@ -41,6 +45,8 @@ const getData = () => {
   const handlePhoto = (e) => {
     setPhoto(e.target.files[0])
     console.log(e.target.files[0])
+    window.URL.revokeObjectURL(currentPhoto);
+    setCurrentPhoto(window.URL.createObjectURL(e.target.files[0]));
   }
 
   const handleChange = (e) => {
@@ -57,20 +63,9 @@ const getData = () => {
     formData.append("ingredients",updateData.ingredients)
     formData.append("category_id",updateData.category_id)
     formData.append("photo",photo)
-    axios.put(url+`/${id}`,formData,{
-      headers:{
-        "Content-Type": "multipart/form-data",
-        "Authorization": token
-      }
-    }).then((res)=>{
-      console.log("update data success")
-      console.log(res)
-      setAlert(true)
-    }).catch((err)=>{
-      console.log("update data failed")
-      console.log(err)
-    })
+    console.log(formData)
 
+    dispatch(editMenu(id,formData,navigate))
   }
 
   return (
@@ -81,7 +76,7 @@ const getData = () => {
         <div className="container">
           {data?.map((item,index) => (
             <div className='d-flex flex-column justify-content-center align-items-center' key={index}>
-              <img src={item.photo} alt="" style={{maxWidth:'30vw'}}/>
+              <img src={currentPhoto || item.photo} alt="" style={{maxWidth:'30vw'}}/>
             <form onSubmit={updateForm} className="d-flex flex-column justify-content-center mt-5 pt-5" style={{minWidth:'50vw'}}>
           <input type='file' onChange={handlePhoto} name='photo' placeholder='Add Photo' required style={{marginTop:'-60px', marginLeft:'280px', width:'8vw'}}/>
 

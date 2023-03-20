@@ -1,11 +1,12 @@
 import React from 'react'
 import NavbarProfile from '../../Component/navbar-menu/indexNavbar'
-import ayudia from '../../Component/navbar-menu/ayudia.png'
 import bombch from '../../pictures/bombch.png' 
 import Footer from '../../Component/footer/indexFooter'
 import { Link } from 'react-router-dom'
 
 export default function Bookmark() {
+  const user = localStorage.getItem('name')
+  const photos = localStorage.getItem('photo')
   return (
     <> <NavbarProfile/>
     <div className="container-fluid">
@@ -18,10 +19,10 @@ export default function Bookmark() {
                           <div className="col-lg-8">
                             <div className="d-flex ">
                               <div className="col-lg border-start border-5 border-warning p-3">
-                            <img src={ayudia} alt="" className="rounded-circle" style={{}} />
+                            <img src={photos} alt="" className="rounded-circle" style={{maxWidth:'80px'}} />
                           </div>
-                          <div className="col-lg-4 d-flex flex-column" style={{marginTop:'7px'}}>
-                            <h5 className="h-1">Ayudia</h5>
+                          <div className="col-lg-4 d-flex flex-column mt-4 ms-2" style={{marginTop:'7px'}}>
+                            <h5 className="h-1" style={{minWidth: "400px"}}>{user}</h5>
                             <h5 className="h-2" style={{minWidth:'150px'}}>10 Recipes</h5>
                           </div>
                           <div className="col d-flex align-items-center">

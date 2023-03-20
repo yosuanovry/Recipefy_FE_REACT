@@ -1,6 +1,6 @@
 import {Link, useParams} from 'react-router-dom'
 import NavbarProfile from '../../Component/navbar-menu/indexNavbar'
-import ayudia from '../../Component/navbar-menu/ayudia.png'
+import ayudia from '../../pictures/karen.png'
 import axios from 'axios'
 import {useState, useEffect} from 'react'
 import thumb1 from '../../pictures/thumb-1.PNG'
@@ -37,7 +37,8 @@ export default function DetailMenu() {
   return (
   <>
   <NavbarProfile />
-  <div className="container-fluid">
+  {data?.map((item, index) => (
+    <div className="container-fluid" key={index}>
         <div className="col-lg-12 mt-5">
           <div className="row ">
             <div className="col-1"></div>
@@ -47,10 +48,10 @@ export default function DetailMenu() {
                   <div className="col-lg-8">
                     <div className="d-flex ">
                       <div className="col-lg border-start border-5 border-warning p-3">
-                        <img src={ayudia} alt="" className="rounded-circle" style={{}} />
+                        <img src={item.user_photo} alt="" className="rounded-circle" style={{maxWidth:'80px'}} />
                       </div>
-                      <div className="col-lg-4 d-flex flex-column" style={{ marginTop: "7px" }}>
-                        <h5 className="h-1">Ayudia</h5>
+                      <div className="col-lg-4 d-flex flex-column mt-4 ms-2" style={{ marginTop: "7px" }}>
+                        <h5 className="h-1">{item.username}</h5>
                         <h5 className="h-2" style={{ minWidth: "150px" }}>
                           10 Recipes
                         </h5>
@@ -64,12 +65,14 @@ export default function DetailMenu() {
               </div>
             </div>
             <div className="col-sm-5 d-flex-column justify-content-end mt-4">
-              <div className="date d-flex justify-content-end">21 February 2023</div>
+              <div className="date d-flex justify-content-end">{item.posttime}</div>
               <div className="date d-flex justify-content-end">20 Likes - 2 Comments</div>
             </div>
           </div>
         </div>
       </div>
+  ))}
+  
 
 {data?.map((item,index) => (
   <>

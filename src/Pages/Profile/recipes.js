@@ -1,72 +1,54 @@
 import { useState, useEffect } from "react";
 import NavbarProfile from "../../Component/navbar-menu/indexNavbar";
-import ayudia from "../../Component/navbar-menu/ayudia.png";
-// import bombch from '../../pictures/bombch.png'
 import Footer from '../../Component/footer/indexFooter'
-import { Link } from "react-router-dom";
-import axios from "axios";
+import { Link, useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteMenu, getMenuByUser } from '../../Storages/Actions/userMenu'
 
-let token = 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjM3YmQzZDc1LWFlZGEtNDAyMS1hMWU3LTgzMjQ2M2MxNzA3ZSIsImVtYWlsIjoieW9zdWF0ZXN0QHlvcy5zZyIsImZ1bGxuYW1lIjoieW9zdWEiLCJwaG90byI6bnVsbCwidmVyaWYiOjEsIm90cCI6IjQzNjkxOSIsImNyZWF0ZWRfYXQiOiIyMDIzLTAyLTI2VDA2OjQ1OjIyLjA0NFoiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzg1MTk1NzcsImV4cCI6MTY3OTgzMzU3N30.0gxVaDdsb_NkJxCbMPMHyJdp_mXEgJ3Okkv4RtbZBV0'
-
-
-let url = `${process.env.REACT_APP_SECRET_KEY}/recipes`
 
 export default function Recipes() {
-  const [data, setData] = useState();
   const [show, setShow] = useState(false);
   const [selected, setSelected] = useState();
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  
+  const get_menu = useSelector((state)=>state.get_MenuUser)
+  const delete_menu = useSelector((state)=>state.delete_Menu)
 
+  const user = localStorage.getItem('name')
+  const photos = localStorage.getItem('photo')
+
+  const updateProfile = "Update Profile"
+
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
   const confirmDelete = (id) => {
     setSelected(id);
     handleShow();
   };
+  
+  const deleteData = (id) => {
+    dispatch(deleteMenu(id))
+  };
+  
+  useEffect(() => {
+    dispatch(getMenuByUser(navigate))
+    handleClose()
+  }, [delete_menu.data, dispatch, navigate]);
+
 
   useEffect(() => {
-    getData();
+    dispatch(getMenuByUser(navigate));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const getData = () => {
-    axios.get(url+`/my-recipes`, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-        Authorization: token,
-      },
-    })
-      .then((res) => {
-        console.log(res);
-        setData(res.data.data);
-      })
-      .then((err) => {
-        console.log(err);
-      });
-  };
-
-  const deleteData = (id) => {
-    axios.delete(url + `/${id}`, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: token,
-        },
-      })
-      .then((res) => {
-        console.log("delete data index ke ", id);
-        console.log(res);
-        handleClose();
-        getData();
-      })
-      .then((err) => {
-        console.log(err);
-      });
-  };
 
   return (
     <>
-      <NavbarProfile />
+      <NavbarProfile updateProf={updateProfile} />
 
         <div className="container-fluid">
           <div className="col-lg-12 mt-5">
@@ -78,10 +60,10 @@ export default function Recipes() {
                     <div className="col-lg-8">
                       <div className="d-flex ">
                         <div className="col-lg border-start border-5 border-warning p-3">
-                          <img src={ayudia} alt="" className="rounded-circle" style={{}} />
+                          <img src={photos} alt="" className="rounded-circle" style={{maxWidth:'80px'}} />
                         </div>
-                        <div className="col-lg-4 d-flex flex-column" style={{ marginTop: "7px" }}>
-                          <h5 className="h-1">Ayudia</h5>
+                        <div className="col-lg-4 d-flex flex-column mt-4 ms-2" style={{ marginTop: "7px" }}>
+                          <h5 className="h-1" style={{ minWidth: "400px" }}>{user}</h5>
                           <h5 className="h-2" style={{ minWidth: "150px" }}>
                             10 Recipes
                           </h5>
@@ -114,7 +96,7 @@ export default function Recipes() {
                     <div className="col-lg-3"></div>
                     <div className="col-lg-4">
                       <div className="row">
-                        <div className="col-lg d-flex flex-rows ms-5" style={{}}>
+                        <div className="col-lg d-flex flex-rows ms-5">
                           <Link to="/user-recipes" className="header border-bottom border-5 border-warning p-3" style={{ color: "black" }}>
                             Recipes
                           </Link>
@@ -125,7 +107,7 @@ export default function Recipes() {
                             Liked
                           </a>
                         </div>
-                        <div className="col-lg-4 d-flex flex-column" style={{}}></div>
+                        <div className="col-lg-4 d-flex flex-column"></div>
                         <div className="col d-flex align-items-center"></div>
                         <div className="col d-flex align-items-center"></div>
                       </div>
@@ -145,7 +127,7 @@ export default function Recipes() {
           <div className="row">
             <div className="col-1 ms-5"></div>
             <div className="col-8 mt-5 ps-4 ms-5">
-              {data?.map((item, index) => (
+              {get_menu.data?.map((item, index) => (
                 <div key={index + 1} className="row my-5">
                   <img className="rounded" alt="" src={item.photo} style={{ maxWidth: "400px" }} />
                   <div className="col">
@@ -196,7 +178,7 @@ export default function Recipes() {
       </div>
 
       <div className="container-fluid" style={{marginTop:'120px'}}>
-    <div className="row" style={{}}>   
+    <div className="row">   
         <div className="col-lg-12 d-flex justify-content-center">
           <button className="btn btn-warning btn-sm text-white shadow-none" style={{minWidth:'100px',fontSize: '20px'}}>Prev</button>
             <div className="date ms-4">Show 6-10 From 10</div>

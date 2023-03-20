@@ -1,6 +1,6 @@
 import React from 'react'
 import NavbarProfile from '../../Component/navbar-menu/indexNavbar'
-import ayudia from '../../Component/navbar-menu/ayudia.png'
+import ayudia from '../../pictures/karen.png'
 import { Link } from 'react-router-dom'
 
 export default function ChangePassword() {
