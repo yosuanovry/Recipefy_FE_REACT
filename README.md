@@ -1,6 +1,7 @@
 # Recipefy_FE React JS
 Recipefy_FE React JS is a website where users can find listed recipes by data that has been premade (on database), or create their
-own recipes and share it with another user. This website was made with React JS, React Context, Axios, Redux, Node JS, Express JS, and PostgreSQL
+own recipes and share it with another user. 
+**This website was made with React JS, React Context, Axios, Redux, Node JS, Express JS, and PostgreSQL**
 
 ## Package Depedencies NodeJS
 ```bash
