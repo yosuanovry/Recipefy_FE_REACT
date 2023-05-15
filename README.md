@@ -1,37 +1,93 @@
 <h1 align="center">Recipefy_FE React JS</h1>
-Recipefy_FE React JS is a website where users can find listed recipes by data that has been premade (on database), or create their
-own recipes and share it with another user. 
-**This website was made with React JS, React Context, Axios, Redux, Node JS, Express JS, and PostgreSQL**
+<br />
+<div align="center">
+   
+   <img src="https://github.com/yosuanovry/Recipefy-Mobile/blob/master/src/Assets/Auth/barbecue1.png?raw=true" alt="Recipefy" width="20%">
+    
 
-## Package Depedencies NodeJS
-```bash
-    "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "axios": "^1.3.4",
-    "bootstrap": "^5.2.3",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.2",
-    "react-dom": "^18.2.0",
-    "react-redux": "^8.0.5",
-    "react-router": "^6.8.2",
-    "react-router-dom": "^6.8.2",
-    "react-scripts": "5.0.1",
-    "redux": "^4.2.1",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.4.2",
-    "sass": "^1.58.3",
-    "sweetalert2": "^11.7.3",
-    "web-vitals": "^2.1.4"
-  },
-```
+  <h3 align="center">Recipefy Web App</h3>
+
+  <p align="center">
+    <a href="https://food-recipes-react.vercel.app/">View Demo</a>
+    ·
+    <a href="https://github.com/yosuanovry/Recipefy_FE_REACT/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/yosuanovry/Recipefy_FE_REACT/issues">Request Feature</a>
+  </p>
+</div>
+Recipefy_FE React JS is a website where users can find listed recipes by data that has been premade (on database), or create their
+own recipes and share it with another user.
+<br />
+<br />
+This website was made with React JS, React Context, Axios, Redux, Node JS, Express JS, and PostgreSQL.
+
+## Table of Contents
+
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+         <li><a href="#backend-api-link">Backend API Link</a></li>
+         <li><a href="#link-app">Website link app</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#ui-screenshots">UI Screenshots</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#developer">Developer</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
+
+## Getting Started
+
+### Prerequisites
+
+Before going to the installation stage there are some software that must be installed first.
+
+- [NodeJs](https://nodejs.org/en/download/)
+
 ## Backend API Link
 - [Backend Repository](https://github.com/yosuanovry/Recipefy_BE)
 - [API](https://puce-victorious-bandicoot.cyclic.app)
 
 ## Link APP
 - [Website](https://food-recipes-react.vercel.app/home)
+
+## Installation
+If you want to run this project locally, I recommend you to configure the [backend](https://github.com/yosuanovry/Ankasafy_BE) first before going into this frontend repository.
+
+- Clone this repository
+
+```
+git clone https://github.com/yosuanovry/Recipefy_FE_REACT.git
+```
+
+- Go to the cloned repository folder
+
+```
+cd ankasafy_fe
+```
+
+- Install the required modules in the packages.json
+
+```
+npm i &/ npm install
+```
+
+- Setting up the .env file
+
+```
+REACT_APP_SECRET_KEY= #Backend API Link
+```
+
+- Run the project
+```
+npm run start
+```
 
 ## UI Screenshots
 | Login Page                                                | Register Page                                              |
@@ -57,4 +113,33 @@ own recipes and share it with another user.
 | --------------------------------------------------------- | --------------------------------------------------------- 
 | ![Profile Page](/public/profile.png ) | ![Update Profile Page](/public/updateprofile.png) |
 
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## Developer
+
+<center>
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/yosuanovry">
+          <img width="100" src="https://avatars.githubusercontent.com/u/123917032?v=4" alt="Yosua"><br/>
+          <sub><b>Yosua Novry Susilo </b></sub> <br/>
+        </a>
+      </td>
+  </table>
+</center>
+
+## License
+
+Distributed under the [MIT](/LICENSE) License.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
