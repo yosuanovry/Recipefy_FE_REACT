@@ -1,4 +1,4 @@
-<h1 align="center">Recipefy_FE React JS</h1>
+<h1 align="center">Recipefy</h1>
 <br />
 <div align="center">
    
