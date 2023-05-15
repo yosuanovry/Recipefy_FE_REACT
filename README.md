@@ -48,7 +48,7 @@ This website was made with React JS, React Context, Axios, Redux, Node JS, Expre
 
 Before going to the installation stage there are some software that must be installed first.
 
-- [NodeJs](https://nodejs.org/en/download/)
+- [Node JS](https://nodejs.org/en/download/)
 
 ## Backend API Link
 - [Backend Repository](https://github.com/yosuanovry/Recipefy_BE)
@@ -58,7 +58,7 @@ Before going to the installation stage there are some software that must be inst
 - [Website](https://food-recipes-react.vercel.app/home)
 
 ## Installation
-If you want to run this project locally, I recommend you to configure the [backend](https://github.com/yosuanovry/Ankasafy_BE) first before going into this frontend repository.
+If you want to run this project locally, I recommend you to configure the [backend](https://github.com/yosuanovry/Recipefy_BE) first before going into this frontend repository.
 
 - Clone this repository
 
@@ -69,7 +69,7 @@ git clone https://github.com/yosuanovry/Recipefy_FE_REACT.git
 - Go to the cloned repository folder
 
 ```
-cd ankasafy_fe
+cd Recipefy_FE_REACT
 ```
 
 - Install the required modules in the packages.json
