@@ -1,70 +1,145 @@
-# Getting Started with Create React App
+<h1 align="center">Recipefy</h1>
+<br />
+<div align="center">
+   
+   <img src="https://github.com/yosuanovry/Recipefy-Mobile/blob/master/src/Assets/Auth/barbecue1.png?raw=true" alt="Recipefy" width="20%">
+    
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+  <h3 align="center">Recipefy Web App</h3>
 
-## Available Scripts
+  <p align="center">
+    <a href="https://food-recipes-react.vercel.app/">View Demo</a>
+    ·
+    <a href="https://github.com/yosuanovry/Recipefy_FE_REACT/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/yosuanovry/Recipefy_FE_REACT/issues">Request Feature</a>
+  </p>
+</div>
+Recipefy_FE React JS is a website where users can find listed recipes by data that has been premade (on database), or create their
+own recipes and share it with another user.
+<br />
+<br />
+This website was made with React JS, React Context, Axios, Redux, Node JS, Express JS, and PostgreSQL.
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+         <li><a href="#backend-api-link">Backend API Link</a></li>
+         <li><a href="#link-app">Website link app</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#ui-screenshots">UI Screenshots</a></li>
+    <li><a href="#contributing">Contributing</a></li>
+    <li><a href="#developer">Developer</a></li>
+    <li><a href="#license">License</a></li>
+  </ol>
+</details>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+Before going to the installation stage there are some software that must be installed first.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [Node JS](https://nodejs.org/en/download/)
 
-### `npm run build`
+## Backend API Link
+- [Backend Repository](https://github.com/yosuanovry/Recipefy_BE)
+- [API](https://puce-victorious-bandicoot.cyclic.app)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Link APP
+- [Website](https://food-recipes-react.vercel.app/home)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
+If you want to run this project locally, I recommend you to configure the [backend](https://github.com/yosuanovry/Recipefy_BE) first before going into this frontend repository.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone this repository
 
-### `npm run eject`
+```
+git clone https://github.com/yosuanovry/Recipefy_FE_REACT.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Go to the cloned repository folder
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+cd Recipefy_FE_REACT
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Install the required modules in the packages.json
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+npm i &/ npm install
+```
 
-## Learn More
+- Setting up the .env file
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+REACT_APP_SECRET_KEY= #Backend API Link
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run the project
+```
+npm run start
+```
 
-### Code Splitting
+## UI Screenshots
+| Login Page                                                | Register Page                                              |
+| --------------------------------------------------------- | --------------------------------------------------------- 
+| ![Login Page](/public/login.png ) | ![Register Page](/public/register.png) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+| Home Page                                                | Search Page                                              |
+| --------------------------------------------------------- | --------------------------------------------------------- 
+| ![Home Page](/public/home.png ) | ![Search Page](/public/search.png) |
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+| Add Recipe Page                                                | Update Recipe Page                                              |
+| --------------------------------------------------------- | --------------------------------------------------------- 
+| ![Add Recipe Page](/public/add.png ) | ![Update Recipe Page](/public/updaterecipe.png) |
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Detail Recipe Page                                                | Delete Recipe                                              |
+| --------------------------------------------------------- | --------------------------------------------------------- 
+| ![Detail Recipe Page](/public/detail.png ) | ![Delete Recipe](/public/delete.png) |
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Profile Page                                                | Update Profile Page                                              |
+| --------------------------------------------------------- | --------------------------------------------------------- 
+| ![Profile Page](/public/profile.png ) | ![Update Profile Page](/public/updateprofile.png) |
 
-### Deployment
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-### `npm run build` fails to minify
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Developer
+
+<center>
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/yosuanovry">
+          <img width="100" src="https://avatars.githubusercontent.com/u/123917032?v=4" alt="Yosua"><br/>
+          <sub><b>Yosua Novry Susilo </b></sub> <br/>
+        </a>
+      </td>
+  </table>
+</center>
+
+## License
+
+Distributed under the [MIT](/LICENSE) License.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
