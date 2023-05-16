@@ -1,0 +1,26 @@
+.footContainer {
+    min-height: 450px; 
+    background-color: #efc81a; 
+    margin-top:100px
+}
+
+.footHeaderText {
+font-size: 72px; 
+color:#2E266F;
+}
+
+.footDescText {
+   font-size: 24px;
+}
+
+@media screen and (max-width: 576px) {
+.footHeaderText {
+text-align: center;
+font-size: 4rem; 
+color:#2E266F;
+}
+.footDescText {
+    text-align: center;
+    font-size: 24px;
+ }
+}

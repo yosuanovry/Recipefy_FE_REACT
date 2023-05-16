@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--global-font-family);
+}
+
+.body {
+  font-family: var(--global-font-family);
+  background-color: white;
+  margin: 0;
+  padding: 0;
+}
+
+.row1{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.imageRow {
+  padding: 5rem;
+}
+
+.textHeader {
+  color: #2e266f;
+  font-weight: 600;
+  font-size: 60px;
+}
+
+.searchBar {
+  margin-top: 10;
+}
+
+.eggImage {
+  width: 600px;
+}
+
+.spacing {
+  height: 300px;
+}
+
+.textHeader1 {
+  height: 100px; 
+  margin: 20px; 
+  border-width: 2vh
+}
+
+.toastImage {
+  max-width: 80vh;
+}
+
+.burgerImage {
+  max-width: 80vh;
+}
+
+.cardImage {
+  max-width: 25vw;
+}
+
+.cardImageText {
+  font-size: 2vw;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.imageCrash {
+  height: 100vh;
+}
+
+.imageTextHeader {
+  font-size: 2.5rem;
+  line-height: 7.5vh;
+  text-align: center;
+}
+
+.imageTextDesc {
+  font-size: 1.3vw;
+  font-weight:500;
+}
+
+.textMargin {
+  margin: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .row1{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imageRow {
+    padding: 1rem;
+  }
+
+  .textHeader {
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .textHeader1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .eggImage {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+  }
+
+  .toastImage {
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    height: 10rem
+  }
+
+  .burgerImage {
+    display: flex;
+    justify-content: center;
+    width: 13rem;
+  }
+
+  .imageCrash {
+    height: 100%
+  }
+
+  .imageTextHeader {
+    line-height: 1;
+    font-size: 4vw;
+    text-align: center;
+  }
+  
+  .imageTextDesc {
+    font-size: 12px;
+    font-weight:500;
+    text-align: justify;
+  }
+
+  .textMargin {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .cardContainer {
+    margin-top:4rem;
+  }
+
+  .cardImageText {
+    font-size: 2.5vw;
+
+  }
+  
+
+  .spacing {
+    height:50px
+  }
+}
