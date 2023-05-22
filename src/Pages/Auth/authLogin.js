@@ -39,6 +39,9 @@ export default function AuthLogin() {
             </div>
             <div className="col-lg-12 col-md-6 mt-1 text-center">
               <h2 className="recipe-text3 mt-3" style={{fontSize:'18px', color:'#8692A6'}}>Login to your existing account</h2>
+              <h5>Dummy ID for exploring</h5>
+              <h6>Email: randy@mail.com</h6>
+              <h6>Password: 123</h6>
             </div>
             <div className="d-flex justify-content-center">
               <form className="col-lg-5 mt-5" onSubmit={Login}>

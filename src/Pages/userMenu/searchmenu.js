@@ -11,6 +11,7 @@ export default function SearchMenu() {
   const [data, setData] = useState();
   const [sort, setSort] = useState('');
   const [currentPage, setCurrentPage] = useState(1)
+  const [isLoading, setIsLoading] = useState(false)
   // const [pageLimit] = useState(5)
 
   const sortOptions = ["asc", "desc"]
@@ -21,6 +22,7 @@ export default function SearchMenu() {
   }, []);
 
   const getData = async (page, limit) => {
+    setIsLoading(true)
     var url = `${process.env.REACT_APP_SECRET_KEY}/recipes?page=${page}&limit=${limit}`;
     return await axios
       .get(url)
@@ -28,9 +30,11 @@ export default function SearchMenu() {
         console.log(res);
         setData(res.data.data);
         setCurrentPage(page)
+        setIsLoading(false)
       })
       .catch((err) => {
         console.log(err);
+        setIsLoading(false)
       });
   };
 
@@ -143,6 +147,7 @@ export default function SearchMenu() {
             </button>
           </div>
         </div>
+        {isLoading && <div className="mt-5 d-flex justify-content-center" style={{fontWeight:'bold'}}>Loading...</div>}
         {data?.map((item, index) => (
           <div key={index}>
             <Link to={`/detailmenu/${item.id}`} style={{ textDecoration: "none", color: "black", cursor: "default" }}>
