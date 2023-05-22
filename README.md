@@ -15,7 +15,7 @@
     <a href="https://github.com/yosuanovry/Recipefy_FE_REACT/issues">Request Feature</a>
   </p>
 </div>
-Recipefy_FE React JS is a website where users can find listed recipes by data that has been premade (on database), or create their
+Recipefy is a website where users can find listed recipes by data that has been premade (on database), or create their
 own recipes and share it with another user.
 <br />
 <br />
